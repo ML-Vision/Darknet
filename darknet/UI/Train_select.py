@@ -9,7 +9,6 @@ import shutil
 import detect_page as de
 import train_page as tr
 import model_page as mo
-import tensor_page as te
 import webbrowser
 
 class select():
