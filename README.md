@@ -9,4 +9,4 @@ make 이후
 
 $./darknet detect cfg/yolov4.cfg yolov4.weights dog.jpg
 
-명령어로 detect 잘 되는지 
+명령어로 detect 잘 되는지
