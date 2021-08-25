@@ -7,6 +7,6 @@ https://drive.google.com/file/d/1cewMfusmPjYWbrnuJRuKhPMwRe_b9PaT/view <- 다운
 
 make 이후
 
-$./darknet detect cfg/yolov4.cfg yolov4.weights dog.jpg
+$./darknet detect yolov4.cfg yolov4.weights dog.jpg
 
 명령어로 detect 잘 되는지 확인하기
