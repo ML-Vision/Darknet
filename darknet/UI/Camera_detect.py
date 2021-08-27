@@ -8,6 +8,11 @@ import pathlib
 import shutil
 
 class camera_detect():
+    cfg  = ""
+    data = ""
+    weights = ""
+    name = ""
+    filepath = ""
     def __init__(self,root):
         self.root = root
         self.root.title("Camera Detect")
@@ -21,28 +26,32 @@ class camera_detect():
             SEL = Tk()
             model_box = Listbox(SEL,height=0,selectmode = "browse")
             folder_name = os.listdir(os.path.dirname(os.path.abspath(__file__))+"/../models")
+            folder_name.remove("models.json")
             for i,name in enumerate(folder_name):
                 model_box.insert(i,name)
             model_box.grid(column = 0,row = 0,padx = 10,pady = 10)
             
             def data():
                 selection = model_box.curselection()
-                Model_path["text"] = filepath = "../models/"+folder_name[selection[0]]
-                file_list = os.listdir(filepath)
+                Model_path["text"] = self.filepath = "../models/"+folder_name[selection[0]]
+                file_list = os.listdir(self.filepath)
+                print(file_list)
                 for f in file_list:
                     if f[-3:] =="cfg":
-                        cfg = f
+                        self.cfg = f
                     elif f[-4:]=="data":
-                        data = f
+                        self.data = f
                     elif f[-7:] == "weights":
-                        weights = f
+                        self.weights = f
                 SEL.destroy()
                 
             Button(SEL,text = "선택" , command = data).grid(column = 0,row = 1,padx = 10,pady = 10)
 
 
         def out_of():
-            instrument = "python3 ../CAM/CAM.py --config_file "+filepath +"/"+cfg + " --data_file "+filepath+"/"+data+" --weights "+filepath+"/"+weights
+
+            instrument = "python3 ../CCAM.py --config_file "+self.filepath +"/"+self.cfg + " --data_file "+self.filepath+"/"+self.data+" --weights "+self.filepath+"/"+self.weights
+            print(instrument)
             instrument = 'gnome-terminal -- ' + instrument
             os.system(instrument)
 
