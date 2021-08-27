@@ -17,11 +17,6 @@ class camera_detect():
         self.root = root
         self.root.title("Camera Detect")
         self.root.geometry("700x100")
-        cfg = ""
-        data = ""
-        weights = ""
-        name = ""
-        filepath = ""
         def set_model():
             SEL = Tk()
             model_box = Listbox(SEL,height=0,selectmode = "browse")
