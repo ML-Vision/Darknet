@@ -194,7 +194,7 @@ def main(cam,converter):
             video.write(get_img)
             if not args.dont_show:
                 cv2.imshow('Inference', get_img)
-                if cv2.waitKey() & 0xFF == ord('q'):
+                if cv2.waitKey(1) & 0xFF == ord('q'):
                     break
             index += 1
         
