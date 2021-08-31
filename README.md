@@ -19,6 +19,3 @@ UI 사용
 
 - Camera 로 Detect시 실행 전에 바슬러 카메라 가이드를 보고 해당 작업을 먼저 해주시길 바랍니다.
 
-
-(https://drive.google.com/drive/folders/1KPYbZX4Y_55dBhmQdVUeMxamsfxopIZm?usp=sharing
-해당 파일 참조)
