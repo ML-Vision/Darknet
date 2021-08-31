@@ -4,7 +4,7 @@
 
 1. Jetson AGX xavier OS 설치
 
-2. Jetson AGX xavier에 darknet 설치
+2. Jetson AGX xavier에 darknet 설치 (해당 파일은 Jetson Xavier AGX 기준으로 작성되어 있어 GPU가 달라진다면 설정 부분을 변경해줘야 합니다.)
 
 3. Train은 colab과 미니PC 두 곳에서 가능합니다.
 
