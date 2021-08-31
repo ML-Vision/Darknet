@@ -1,12 +1,14 @@
 # Darknet
 
+기본 설정
+
 1. Jetson AGX xavier OS 설치
 
 2. Jetson AGX xavier에 darknet 설치
 
 3. Train은 colab과 미니PC 두 곳에서 가능합니다.
 
-UI 사용에 관하여
+UI 사용
 
 - UI 사용시 Data를 선택하는 Root 경로는 Image_to_Train 폴더입니다.
 
