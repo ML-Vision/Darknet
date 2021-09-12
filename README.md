@@ -1,5 +1,7 @@
 # Darknet
 
+### Linux
+
 기본 설정
 
 1. Jetson AGX xavier OS 설치
@@ -19,3 +21,5 @@ UI 사용
 
 - Camera 로 Detect시 실행 전에 바슬러 카메라 가이드를 보고 해당 작업을 먼저 해주시길 바랍니다.
 
+
+### WINDOW
