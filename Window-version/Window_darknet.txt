@@ -1,0 +1,28 @@
+현재 진행상황 
+window에 darknet GPU사용하지 않게 프로그램을 compile해서 
+Opencv없이 동작하는거 확인
+
+앞으로 할 일 
+
+OpenCV 연동해서 설치 과정 작성 및 GPU 있을시 추가 프로그램
+CUDNN, CUDA등에 대해 조사 및 작성
+OpenCV 포함해서 컴파일 해보기
+UI로 동작하는지 확인 하기
+
+
+
+
+
+
+
+cd C:\darknet\build\darknet\x64
+darknet_no_gpu data/coco.data yolov4.cfg yolov4.weights dog.jpg
+
+
+MSVCR100.dll 에러
+https://www.microsoft.com/ko-KR/download/details.aspx?id=26999 
+- 32bit일 경우 : vcredist_x86.exe
+- 64bit일 경우 : vcredist_x64.exe
+다운 후 설치 
+
+참고 사이트 - https://ungdoli0916.tistory.com/27#google_vignette
