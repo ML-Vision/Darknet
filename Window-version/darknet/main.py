@@ -1,8 +1,7 @@
 from tkinter import *
 from tkinter import filedialog
 import tkinter as tk
-import subprocess
-import UI.UI as ui
+import UI as ui
  
 def main():
     root = Tk()

@@ -1,11 +1,8 @@
 from tkinter import *
 from tkinter import filedialog
 import tkinter as tk
-import subprocess
 import os
 import json
-import pathlib
-import shutil
 import detect_page as de
 import train_page as tr
 import model_page as mo
@@ -92,7 +89,7 @@ class UI():
             camera_page = te.camera_detect(page)
 
 
-        model_information()
+        # model_information()
         #train 버튼
         Button(self.root,text = "Train" ,command = train,overrelief = "groove").place(x = 50,y=200,width = 100,height = 50)
         #detect버튼
