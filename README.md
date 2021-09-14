@@ -27,7 +27,7 @@ UI 사용
 윈도우는 기본적으로 darknet을 빌드시 Visual studio가 필요합니다.
 
 
-### **필요 프로그램 **
+###**필요 프로그램 **
 
 
 Visual studio 설치
