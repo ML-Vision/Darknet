@@ -62,7 +62,8 @@ https://opencv.org/releases/
 - 모델이 저장되는 경로는 darknet/models/(모델 이름) 입니다.
 
 - colab에서 모델 Train시 작업이 끝나면 weights가 /backup폴더에 저장이 됩니다.
-- darknet/models/해당 폴더(모델 이름) 에 /obj.data , obj.names, yolov4-obj.cfg, weights 총 4개의 파일을 저장하면 됩니다.
+
+- ./models/해당 폴더(모델 이름) 에 /obj.data , obj.names, yolov4-obj.cfg, weights 총 4개의 파일을 저장하면 됩니다.
 
 - Camera 로 Detect시 실행 전에 바슬러 카메라 가이드를 보고 해당 작업을 먼저 해주시길 바랍니다.
 
