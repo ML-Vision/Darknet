@@ -1,0 +1,5 @@
+classes= 1
+train = ./Image_to_Train/test_data/train.txt
+valid = ./Image_to_Train/test_data/valid.txt
+names = ./models/1/obj.names
+backup = ./models/1/
