@@ -58,7 +58,7 @@ class UI():
     def __init__(self,root):
         self.root = root
         self.root.title("Vision")
-        self.root.geometry("800x600")
+        self.root.geometry("800x600+100+100") # w, h, 왼쪽 끝에서의 거리, 오른쪽 끝에서의 거리
         
         #모델 이름 쇼박스
         Label(text = "MODEL : ",font = ("Times","12"),foreground = 'white',background = '#000000',width = 10).place(x = 50, y = 80)

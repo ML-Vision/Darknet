@@ -10,7 +10,7 @@ class detect():
         #새 페이지 오픈
         self.root = root
         self.root.title("Detect_Select")
-        self.root.geometry('700x200')
+        self.root.geometry('700x200-100+100')
         #select model 함수
         
         def sel_page():

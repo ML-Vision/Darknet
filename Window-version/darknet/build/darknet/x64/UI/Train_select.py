@@ -10,7 +10,7 @@ class select():
     def __init__(self,root,model_name,model_path,data_name,data_path):
         self.root = root
         self.root.title("Train_select")
-        self.root.geometry('600x172')
+        self.root.geometry('600x172-100+100')
 
         def COLAB():
             webbrowser.open("https://colab.research.google.com/drive/1HZpxIQCitg3GqBplAYOL-aGKa6K3r5lz?usp=sharing")

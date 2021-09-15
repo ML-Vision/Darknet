@@ -14,7 +14,7 @@ class train():
         self.root = root
         #새 페이지 오픈
         self.root.title("Train_Select")
-        self.root.geometry('700x200')
+        self.root.geometry('700x200-100+100')
         
         
         def sel_data():

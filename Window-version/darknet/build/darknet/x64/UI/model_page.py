@@ -16,7 +16,7 @@ class info():
         model_names = mp.model_names() # os.listdir(model_root)
         window_height = str(len(model_names) * 10 + 100) # 기본값 100. 모델 이름 한개당 10씩 늘어남. 
         self.root.title("Model information")
-        self.root.geometry('180x' + window_height)
+        self.root.geometry('180x' + window_height + '-100+100')
         self.root.resizable(True,True)
 
         model_box = Listbox(self.root,height=0,selectmode = "browse")

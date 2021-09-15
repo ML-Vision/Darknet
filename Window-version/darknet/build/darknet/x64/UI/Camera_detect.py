@@ -11,7 +11,7 @@ class camera_detect():
     def __init__(self,root):
         self.root = root
         self.root.title("Camera Detect")
-        self.root.geometry("700x100")
+        self.root.geometry("700x100-100+100")
         self.my_name = ""
         def set_model():
             SEL = Tk()
