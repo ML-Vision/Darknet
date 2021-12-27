@@ -103,8 +103,6 @@ class train():
                         new_string = 'filters=' + str(filter_num) + '\n'
                     elif i == 1145:
                         new_string = 'classes=' + str(class_num) + '\n'
-                    elif i == 2:
-                        new_string = 'batch=8'
                     else:
                         new_string = l
         

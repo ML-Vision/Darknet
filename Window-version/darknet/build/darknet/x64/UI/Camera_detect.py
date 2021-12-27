@@ -48,6 +48,15 @@ class camera_detect():
             print(instrument)
             os.system(instrument)
 
+        def multi_camera():
+            instrument1 = "start python ./Streaming_Camera0.py --config_file "+self.filepath +"/"+self.cfg + " --data_file "+self.filepath+"/"+self.data+" --weights "+self.filepath+"/"+self.weights + "  --model_name ./CAM_Detections/" + self.my_name + '/' 
+            print(instrument1)
+            os.system(instrument1)
+            instrument2 = "start python ./Streaming_Camera1.py --config_file "+self.filepath +"/"+self.cfg + " --data_file "+self.filepath+"/"+self.data+" --weights "+self.filepath+"/"+self.weights + "  --model_name ./CAM_Detections/" + self.my_name + '/' 
+            print(instrument2)
+            os.system(instrument2)
+
+
         Model = Label(self.root,text = "Model Path: ",font = ("Times","15")).grid(column = 0,row = 1)
         Model_path = Label(self.root,text = "",height = 2,width = 50,borderwidth = 1,relief="groove")
         Model_path.grid(column = 1, row = 1)
@@ -59,3 +68,5 @@ class camera_detect():
         OK.grid(column = 2,row = 2)
         web = Button(self.root,text = " WebCAM 검사 시작 ",command = web_out_of)
         web.grid(column = 3,row = 2)
+        web = Button(self.root,text = " Double_Camera 검사 시작 ",command = multi_camera)
+        web.grid(column = 2,row = 3)
