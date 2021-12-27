@@ -16,3 +16,5 @@ class Streaming_channel():
         imshow("Camera{}".format(self.channel), image);
         ch = waitKey(1);
         if (ch != 'q') : key = ch;
+    def destory_camera(self):
+        self.camera.release()

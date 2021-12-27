@@ -14,10 +14,12 @@ def main():
     while(1):
         image1 = show1.get_Frame()
         image2 = show2.get_Frame()
-        Pimage1 = MYDM.predict(image1)
-        Pimage2 = MYDM.predict(image2)
+        Pimage1,fps1 = MYDM.predict(image1)
+        Pimage2,fps2 = MYDM.predict(image2)
         show1.show_live(Pimage1)
         show2.show_live(Pimage2)
+        print("FPS1: {}".format(fps1))
+        print("FPS2: {}".format(fps2))
         
 
 

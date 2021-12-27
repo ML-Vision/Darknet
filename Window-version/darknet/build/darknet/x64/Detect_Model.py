@@ -25,6 +25,19 @@ def image_detection(img,  network, class_names, class_colors, thresh):
     image = darknet.draw_boxes(detections, image_resized, class_colors)
     return cv2.cvtColor(image, cv2.COLOR_BGR2RGB), detections
 
+def set_saved_video(size):
+    fourcc = cv2.VideoWriter_fourcc(*"MJPG")
+    fps = int(2)
+    video = cv2.VideoWriter('output.avi', fourcc, fps, size)
+    
+    
+    """video = set_saved_video((cam.Width.GetValue(),cam.Height.GetValue()))
+    if not video.isOpened():
+        print('File open failed!')
+        cam.release()
+        exit()"""
+    return video
+
 class Detect_Model():
     def __init__(self,args):
         self.args = args
@@ -42,4 +55,5 @@ class Detect_Model():
             image, self.network, self.class_names, self.class_colors, self.args.thresh
         )
         fps = int(1/(time.time() - prev_time))
-        return get_img
+        return get_img,fps
+    

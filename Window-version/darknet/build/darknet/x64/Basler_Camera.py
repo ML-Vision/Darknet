@@ -60,14 +60,13 @@ def get_cameras():
             name = "Right" if i == 0 else "Left"
             print(name)
             cur_cam = (tlFactory.CreateDevice(devices[i]))
-            cam.Attach(cur_cam)
             cur_cam = camera_setting(cur_cam,"Line1")
             
             cams.append(Streaming_channel(cur_cam,name))
             # Print the model name of the camera.
             print("Using device ", cam.GetDeviceInfo().GetModelName())
         
-        return cameras,cams
+        return cams
     
     except genicam.GenericException as e:
         # Error handling
@@ -75,3 +74,13 @@ def get_cameras():
         exitCode = 1
     # Comment the following two lines to disable waiting on exit.
     sys.exit(exitCode)
+    
+def get_camera():
+    try:
+        tlf = py.TlFactory.GetInstance()
+        cam = tlf.CreateFirstDevice()
+        cam = camera_setting(cam,"Line1")
+        return Streaming_channel(cam,"Camera")
+    except:
+        print("No Camera")
+        return None,None
