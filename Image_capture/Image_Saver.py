@@ -7,8 +7,8 @@ from image_show import Streaming_channel as stream
 
 def one_Camera():
     Camera_Object = Basler.get_camera() # 카메라 객체
-    maximum = 10
-    index = 0
+    maximum = 100
+    index = 10
     
     # 결과 폴더 만들어 주기.
     if not os.path.isdir('./Images'):
@@ -19,10 +19,11 @@ def one_Camera():
     while Camera_Object.cam.IsGrabbing():    
         if index == maximum : break
         Camera_Object.grabResult = Camera_Object.cam.RetrieveResult(600000, py.TimeoutHandling_ThrowException)
-        if Camera_Object.rabResult.GrabSucceeded():
-            image = Camera_Object[0].get_Frame()
+        if Camera_Object.grabResult.GrabSucceeded():
+            image = Camera_Object.get_Frame()
             image_name = f"{index}.jpg"
-            cv2.imwrite(os.path.join('./Images', image_name),get_img, params=[cv2.IMWRITE_PNG_COMPRESSION,0]) 
-            get_img = cv2.resize(get_img, (617, 512))
+            cv2.imwrite('./Images/{}.jpg'.format(image_name),image) 
+            get_img = cv2.resize(image, (617, 512))
             Camera_Object.show_live(get_img)
             index += 1
+one_Camera()

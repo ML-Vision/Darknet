@@ -3,7 +3,7 @@ from tkinter import *
 import tkinter as tk
 import os
 import shutil
-import UI.UI as ui
+import UI as ui
 from datetime import datetime
 import uuid
 import UI.my_path as mp
