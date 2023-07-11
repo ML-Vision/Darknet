@@ -77,7 +77,7 @@ https://opencv.org/releases/
 
 ### 용량이 큰 파일 다운로드 
 
-- yolov4.weights --> https://drive.google.com/file/d/1MZgorvsiHlaojaAHBqM9XMuiIwQi0dKe/view?usp=sharing
+- yolov4.weights --> https://drive.google.com/file/d/1pP-wbvVSqQkf9F4i82YecTnRho-LbN_K/view?usp=sharing
 (테스트 용 학습된 가중치)
-- yolov4.conv.137 -->https://drive.google.com/uc?id=1JKF-bdIklxOOVy-2Cr5qdvjgGpmGfcbp
+- yolov4.conv.137 --> https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137
 (학습용 가중치. 경로는 (자신의 경로)\darknet\build\darknet\x64에 저장하면 됩니다.)
